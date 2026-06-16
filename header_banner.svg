@@ -1,0 +1,37 @@
+<svg width="800" height="180" viewBox="0 0 800 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font-family: 'Outfit', 'Inter', sans-serif; font-weight: 800; font-size: 38px; fill: #ffffff; opacity: 0; animation: fadeIn 1.5s ease-out forwards; }
+    .subtitle { font-family: 'Inter', sans-serif; font-size: 16px; fill: #e0d4fc; opacity: 0; animation: fadeIn 1.5s ease-out 0.6s forwards; letter-spacing: 2px; }
+    @keyframes fadeIn { to { opacity: 1; } }
+    .wave { animation: wave-anim 8s linear infinite; }
+    .wave2 { animation: wave-anim 12s linear infinite; opacity: 0.3; }
+    @keyframes wave-anim {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-25%); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4B0082" />
+      <stop offset="50%" stop-color="#8A2BE2" />
+      <stop offset="100%" stop-color="#9370DB" />
+    </linearGradient>
+    <clipPath id="rectClip">
+      <rect width="800" height="180" rx="15" />
+    </clipPath>
+  </defs>
+  
+  <!-- Background Card -->
+  <rect width="800" height="180" rx="15" fill="url(#grad)" />
+  
+  <!-- Animated Wave overlays -->
+  <g clip-path="url(#rectClip)">
+    <path class="wave2" d="M 0 120 Q 200 100 400 130 T 800 110 L 800 180 L 0 180 Z" fill="#ffffff" />
+    <path class="wave" d="M 0 140 Q 200 160 400 130 T 800 150 L 800 180 L 0 180 Z" fill="#ffffff" fill-opacity="0.15" />
+  </g>
+
+  <!-- Content -->
+  <text x="50%" y="85" text-anchor="middle" class="title">Amie Cha</text>
+  <text x="50%" y="125" text-anchor="middle" class="subtitle">SECURITY ENGINEER & DEVELOPER</text>
+</svg>
