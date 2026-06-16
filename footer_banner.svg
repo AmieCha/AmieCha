@@ -1,36 +1,35 @@
-<svg width="800" height="110" viewBox="0 0 800 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="100" viewBox="0 0 800 100" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="fgrad" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#6E5D91" />
-      <stop offset="55%" stop-color="#4B3B6B" />
-      <stop offset="100%" stop-color="#2B1D3D" />
-    </linearGradient>
     <radialGradient id="fblob" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#C9C2E0" stop-opacity="0.4" />
-      <stop offset="100%" stop-color="#C9C2E0" stop-opacity="0" />
+      <stop offset="0%" stop-color="#C9B8F0" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#C9B8F0" stop-opacity="0" />
     </radialGradient>
-    <clipPath id="fclip">
-      <rect width="800" height="110" rx="18" />
+    <linearGradient id="fpanel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.16" />
+    </linearGradient>
+    <clipPath id="fouter">
+      <rect width="800" height="100" rx="24" />
     </clipPath>
     <filter id="fblur" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="28" />
+      <feGaussianBlur stdDeviation="36" />
+    </filter>
+    <filter id="fshadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#6C5B8C" flood-opacity="0.14" />
     </filter>
     <style>
-      .fblob1 { animation: fdrift 28s ease-in-out infinite; }
-      @keyframes fdrift {
-        0%, 100% { transform: translate(0, 0); }
-        50% { transform: translate(-20px, 10px); }
-      }
-      .ftext { font-family: 'Segoe UI',sans-serif; font-size: 17px; font-weight: 600; fill: #f3f0fa; opacity: 0; animation: ffade 1.4s ease-out 0.3s forwards; }
-      .fsub { font-family: 'Segoe UI',sans-serif; font-size: 11px; fill: #cfc6e6; letter-spacing: 1.5px; opacity: 0; animation: ffade 1.4s ease-out 0.8s forwards; }
+      .ftext { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 16px; fill: #3D3358; opacity: 0; animation: ffade 1.3s ease-out 0.2s forwards; }
+      .fsub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; font-size: 10px; fill: #7A6F99; letter-spacing: 2px; opacity: 0; animation: ffade 1.3s ease-out 0.6s forwards; }
       @keyframes ffade { to { opacity: 1; } }
     </style>
   </defs>
-  <rect width="800" height="110" rx="18" fill="url(#fgrad)" />
-  <g clip-path="url(#fclip)">
-    <ellipse class="fblob1" cx="600" cy="30" rx="180" ry="80" fill="url(#fblob)" filter="url(#fblur)" />
-    <rect x="1" y="1" width="798" height="108" rx="17" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+
+  <g clip-path="url(#fouter)">
+    <ellipse cx="650" cy="20" rx="190" ry="100" fill="url(#fblob)" filter="url(#fblur)" />
   </g>
-  <text x="50%" y="55" text-anchor="middle" class="ftext">Thanks for stopping by</text>
-  <text x="50%" y="78" text-anchor="middle" class="fsub">LET'S BUILD SOMETHING SECURE TOGETHER</text>
+
+  <rect x="30" y="14" width="740" height="72" rx="22" fill="url(#fpanel)" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1" filter="url(#fshadow)" />
+
+  <text x="50%" y="50" text-anchor="middle" class="ftext">Thanks for stopping by</text>
+  <text x="50%" y="70" text-anchor="middle" class="fsub">LET'S BUILD SOMETHING SECURE TOGETHER</text>
 </svg>
