@@ -1,5 +1,42 @@
 <div align="center">
-  <img src="./header_banner.png" alt="Amie Cha Header Banner" width="100%">
+  <!-- Dynamic SVG Banner with smooth gradient and wave animation -->
+  <svg width="100%" height="180" viewBox="0 0 800 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+      .title { font-family: 'Outfit', 'Inter', sans-serif; font-weight: 800; font-size: 38px; fill: #ffffff; opacity: 0; animation: fadeIn 1.5s ease-out forwards; }
+      .subtitle { font-family: 'Inter', sans-serif; font-size: 16px; fill: #e0d4fc; opacity: 0; animation: fadeIn 1.5s ease-out 0.6s forwards; letter-spacing: 2px; }
+      @keyframes fadeIn { to { opacity: 1; } }
+      .wave { animation: wave-anim 8s linear infinite; }
+      .wave2 { animation: wave-anim 12s linear infinite; opacity: 0.3; }
+      @keyframes wave-anim {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(-25%); }
+        100% { transform: translateX(0); }
+      }
+    </style>
+    <defs>
+      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#4B0082" />
+        <stop offset="50%" stop-color="#8A2BE2" />
+        <stop offset="100%" stop-color="#9370DB" />
+      </linearGradient>
+      <clipPath id="rectClip">
+        <rect width="800" height="180" rx="15" />
+      </clipPath>
+    </defs>
+    
+    <!-- Background Card -->
+    <rect width="800" height="180" rx="15" fill="url(#grad)" />
+    
+    <!-- Animated Wave overlays -->
+    <g clip-path="url(#rectClip)">
+      <path class="wave2" d="M 0 120 Q 200 100 400 130 T 800 110 L 800 180 L 0 180 Z" fill="#ffffff" />
+      <path class="wave" d="M 0 140 Q 200 160 400 130 T 800 150 L 800 180 L 0 180 Z" fill="#ffffff" fill-opacity="0.15" />
+    </g>
+
+    <!-- Content -->
+    <text x="50%" y="85" text-anchor="middle" class="title">Amie Cha</text>
+    <text x="50%" y="125" text-anchor="middle" class="subtitle">SECURITY ENGINEER & DEVELOPER</text>
+  </svg>
 </div>
 
 <br>
@@ -7,7 +44,7 @@
 <div align="center">
   <h1>💜 Hello, I'm Amie Cha! 💜</h1>
   <p><strong>수원대학교 정보보호학과 | Security Engineer & Developer</strong></p>
-  <p>기획과 발표에 강력한 강점을 가진 보안 엔지니어이자 개발자입니다. 보안과 개발의 경계를 허물며, 안전하고 신뢰할 수 있는 시스템 및 보안 제품을 설계하고 기획하는 것에 깊은 관심을 가지고 있습니다. 대부분의 팀 프로젝트에서 주도적으로 기획과 발표를 담당하며 프로젝트를 성공으로 이끌었습니다.</p>
+  <p>안전하고 신뢰할 수 있는 시스템을 고민하는 보안 엔지니어이자 개발자입니다. 보안과 개발의 균형을 이루며, 기술적 깊이와 함께 협업에서의 원활한 커뮤니케이션 및 프로젝트 기획·조율에 매력을 느낍니다. 다양한 팀 프로젝트에서 아이디어를 구체화하고 구성원들의 의견을 조화롭게 모아 발표로 표현하는 과정을 즐깁니다.</p>
 </div>
 
 <hr>
@@ -15,7 +52,7 @@
 ## 📌 About Me
 - 🏫 **University**: 수원대학교 정보보호학과 (Information Security)
 - 🔬 **Interests**: 시스템 해킹 (System Hacking) | 웹 해킹 (Web Hacking) | 암호학 (Cryptography) | 보안 제품 개발 (Security Product Development)
-- 💡 **Strength**: **프로젝트 기획 및 발표 주도 🎤** (대부분의 프로젝트 기획 및 메인 발표 담당)
+- 💡 **Strength**: **기획 및 테크니컬 커뮤니케이션 🎤** (아이디어를 조화롭게 조율하고 효과적으로 전달하는 능력)
 - 💡 **Motto**: "안전한 내일을 코딩하고 설계하는 보안 엔지니어"
 
 ---
@@ -47,10 +84,10 @@
 ---
 
 ## 🏆 Projects & Hackathons
-- 🎓 **2학년 정보보호학과 졸업 전시** — **대상 🏆** (기획 및 발표 주도)
-- 💻 **임베디드 공모전** 및 **한이음 ICT 멘토링** 참여 (기획 및 발표 담당)
-- ⚔️ **교내 바이브코딩 해커톤** 참가 (기획 및 발표 담당)
-- 🛡️ **wubpurifier 그룹 프로젝트** (2025.07 ~ 2026.11) — **기획 및 발표 주도 🎤**
+- 🎓 **2학년 정보보호학과 졸업 전시** — **대상 🏆** (프로젝트 기획 및 발표 참여)
+- 💻 **임베디드 공모전** 및 **한이음 ICT 멘토링** 참여 (기획 및 발표 조율)
+- ⚔️ **교내 바이브코딩 해커톤** 참가 (아이디어 빌딩 및 발표 서포트)
+- 🛡️ **wubpurifier 그룹 프로젝트** (2025.07 ~ 2026.11) — **팀 프로젝트 기획 및 조율 🎤**
 
 ---
 
@@ -58,8 +95,8 @@
 - 🏢 **하이온넷 (HighONNet)** (2025.07 ~ 2026.01) — 인턴 (VPN 운영 및 네트워크 보안 기술 지원)
 - 📊 **yd&s** (2026.02) — 인턴 (빅데이터 시각화 파트)
 - 🎥 **NSHC** (2025.03.20 ~ 2025.05.10) — 네트워크 교육 영상 편집 및 제작 지원
-- 🎮 **스타트업 플리더스 (Fliders)** (2024.01 ~ 2024.06) — 사업계획서 작성 및 게임 스테이지 기획 주도
-- 📖 **GIS 활용 통계 프로그램 파이썬 코딩 과외** (2025.11) — 주도적 강의 진행
+- 🎮 **스타트업 플리더스 (Fliders)** (2024.01 ~ 2024.06) — 사업계획서 작성 및 게임 스테이지 기획 지원
+- 📖 **GIS 활용 통계 프로그램 파이썬 코딩 과외** (2025.11) — 맞춤형 강의 진행
 
 ---
 
@@ -78,5 +115,5 @@
 <br>
 
 <div align="center">
-  <a href="mailto:82103@example.com">📧 Contact Me</a>
+  <a href="mailto:0amiecha0@gmail.com">📧 Contact Me</a>
 </div>
